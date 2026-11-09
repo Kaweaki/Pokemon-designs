@@ -120,9 +120,9 @@ på Lilygon kräver källbygge.
 Tre vägar:
 
 1. **Projektets eget par** — `jagaren` på A, `kartografen` på B. Samma protokoll
-i båda ändar, ingen ny kod.
+   i båda ändar, ingen ny kod.
 2. **Marauder på A + CLI-tolk i B** — Lilygon parsar `list -a`/`scanap` i
-stället för ramar. Kräver källbygge plus en ny parser.
+   stället för ramar. Kräver källbygge plus en ny parser.
 3. **Marauder på ett kort, utan länk** — snabbast, men då är B bara en skärm.
 
 ## Brownout
@@ -146,13 +146,13 @@ syns det i stället som att kortet "startar om utan anledning".
 Åtgärder, i ordning:
 
 1. Annan USB-port (baktill på stationär dator, eller en port med egen
-strömförsörjning) och en kort, tjock kabel — inte en laddkabel.
+   strömförsörjning) och en kort, tjock kabel — inte en laddkabel.
 2. 470 µF elektrolyt över 3V3/GND nära kortet, plus 10 µF keramisk och 100 nF
-vid varje modul. Det tar topparna som radio-burstarna ger.
+   vid varje modul. Det tar topparna som radio-burstarna ger.
 3. Sänkt sändningseffekt i firmware (`WiFi.setTxPower(WIFI_POWER_8_5dBm)`) om
-räckvidden inte är kritisk.
+   räckvidden inte är kritisk.
 4. Mät 3V3 under skanning. Under ~3,0 V vid modulen är det strömförsörjningen och
-inget annat.
+   inget annat.
 
 Ingen brownout har observerats på Lilygon: sedan flashningen har varje boot
 rapporterat 11, och inga `Brownout detector was triggered` finns i loggen.
@@ -160,8 +160,8 @@ rapporterat 11, och inga `Brownout detector was triggered` finns i loggen.
 ## Inte verifierat
 
 - Hur skärmen **ser ut** — ingen bild har tagits; bara busstider och att ingen
-krasch sker.
+  krasch sker.
 - UART-länken mot A — A har varit oinkopplad hela tiden, så noll ramar har
-tagits emot.
+  tagits emot.
 - Joysticken — inte inkopplad; D6 läser därför flytande värden i stället för
-~2048.
+  ~2048.
